@@ -1,0 +1,110 @@
+/* Dose Daemon — de publieke pagina's.
+   Zelfde donker en zelfde font als de app, maar zonder de aurora-gloed: dit
+   zijn documenten om te lezen, geen scherm om naar te kijken. */
+
+:root {
+  color-scheme: dark;
+  --bg: #05060a;
+  --bg-alt: #0b0d13;
+  --tekst: #f4f6fb;
+  --gedempt: rgba(244, 246, 251, 0.62);
+  --lijn: rgba(244, 246, 251, 0.14);
+  --cyaan: #8fe9ff;
+  --goud: #ffc978;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 0 22px 80px;
+  background: var(--bg);
+  color: var(--tekst);
+  font-family: Archivo, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.6;
+  -webkit-text-size-adjust: 100%;
+}
+
+main { max-width: 42rem; margin: 0 auto; }
+
+header {
+  max-width: 42rem;
+  margin: 0 auto;
+  padding: 40px 0 8px;
+  border-bottom: 1px solid var(--lijn);
+}
+
+.merk {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(244, 246, 251, 0.5);
+  text-decoration: none;
+  display: inline-block;
+}
+
+h1 { font-size: 30px; font-weight: 600; line-height: 1.2; margin: 18px 0 6px; }
+h2 { font-size: 21px; font-weight: 600; margin: 40px 0 10px; }
+h3 { font-size: 17px; font-weight: 600; margin: 26px 0 6px; }
+
+.datum { color: var(--gedempt); font-size: 15px; margin: 0 0 32px; }
+
+p, li { color: rgba(244, 246, 251, 0.86); }
+ul { padding-left: 22px; }
+li { margin: 6px 0; }
+
+a { color: var(--cyaan); }
+
+strong { font-weight: 600; color: var(--tekst); }
+
+.kader {
+  border: 1px solid var(--lijn);
+  border-radius: 18px;
+  padding: 18px 20px;
+  margin: 24px 0;
+  background: rgba(244, 246, 251, 0.04);
+}
+
+.kader.let-op { border-color: rgba(255, 201, 120, 0.55); }
+.kader h3:first-child, .kader p:first-child { margin-top: 0; }
+.kader p:last-child { margin-bottom: 0; }
+
+.let-op-kop {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--goud);
+  margin: 0 0 8px;
+}
+
+dl { margin: 0; }
+dt { font-weight: 600; margin-top: 14px; }
+dd { margin: 2px 0 0; color: rgba(244, 246, 251, 0.86); }
+
+footer {
+  max-width: 42rem;
+  margin: 64px auto 0;
+  padding-top: 24px;
+  border-top: 1px solid var(--lijn);
+  color: var(--gedempt);
+  font-size: 15px;
+}
+
+footer a { margin-right: 18px; }
+
+table { width: 100%; border-collapse: collapse; margin: 16px 0; }
+th, td {
+  text-align: left;
+  padding: 10px 12px 10px 0;
+  border-bottom: 1px solid var(--lijn);
+  vertical-align: top;
+}
+th { font-weight: 600; font-size: 15px; color: rgba(244, 246, 251, 0.6); }
+
+@media (max-width: 480px) {
+  body { font-size: 16px; }
+  h1 { font-size: 26px; }
+}
