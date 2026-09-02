@@ -8,6 +8,7 @@
   "config": {
     "features": {
       "momentum": true,
+      "plus": true,
       "telemetrie_aanbod": true,
       "tips": true,
       "berichten": true
